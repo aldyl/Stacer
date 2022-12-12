@@ -1,6 +1,5 @@
 #include "cpu_info.h"
-
-#include "command_util.h"
+#include "Utils/command_util.h"
 
 int CpuInfo::getCpuPhysicalCoreCount() const
 {

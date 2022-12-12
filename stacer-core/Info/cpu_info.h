@@ -8,6 +8,7 @@
 
 #define PROC_CPUINFO "/proc/cpuinfo"
 #define LSCPU_COMMAND "LANG=nl_NL.UTF-8 lscpu"
+#define CPU_SCALING_DRIVER "cat /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq"
 #define PROC_LOADAVG "/proc/loadavg"
 #define PROC_STAT    "/proc/stat"
 

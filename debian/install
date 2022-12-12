@@ -1,3 +1,4 @@
-stacer/* usr/share/stacer/
+obj-x86_64-linux-gnu/output/stacer usr/bin
+obj-x86_64-linux-gnu/output/lib/* usr/lib
 applications/* usr/share/applications/
 icons/* usr/share/icons/

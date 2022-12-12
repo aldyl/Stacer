@@ -2,7 +2,14 @@ Source: stacer
 Section: utils
 Priority: optional
 Maintainer: Oguzhan INAN <oguzhan3488@gmail.com>
-Build-Depends: debhelper (>=9)
+Build-Depends: debhelper (>=10),
+               cmake,
+               qttools5-dev,
+               qt5-qmake-bin,
+               qt5-qmake,
+               libqt5core5a,
+               libqt5charts5-dev,
+               libqt5networkauth5-dev
 Standards-Version: 3.9.6
 Homepage: https://github.com/oguzhaninan/Stacer
 Vcs-Browser: https://github.com/oguzhaninan/Stacer.git
