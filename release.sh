@@ -31,3 +31,21 @@ cd $RELEASE/$DIR
 dh_make --createorig -i -c mit
 debuild --no-lintian -us -uc
 fi
+
+# Build with official Debian/Ubuntu system sbuild
+# You need configure sbuild for the objective system
+
+  sbuild --arch=amd64 --dist=jammy -c jammy-amd64-sbuild stacer_1.1.0-1ubuntu1.dsc 
+
+# Build with dpkg-builpackage for fast implementation
+
+  dpkg-buildpackage --sanitize-env -us -uc -b -rfakeroot
+
+# To know what are the shared libraries used for run stacer in shared libraries system. 
+readelf -d /usr/bin/stacer | grep NEEDED | awk '{ print $5; } '
+
+# Process that files wit apt-file
+
+ sudo apt-file find --package-only  [libQt5Charts.so.5]
+
+

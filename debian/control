@@ -9,13 +9,21 @@ Build-Depends: debhelper (>=10),
                qt5-qmake,
                libqt5core5a,
                libqt5charts5-dev,
-               libqt5networkauth5-dev
+               libqt5networkauth5-dev,
+               libqt5svg5-dev
 Standards-Version: 3.9.6
 Homepage: https://github.com/oguzhaninan/Stacer
 Vcs-Browser: https://github.com/oguzhaninan/Stacer.git
 
 Package: stacer
 Architecture: all
-Depends: ${misc:Depends}
+Depends: libqt5charts5,
+         libqt5network5,
+         libqt5widgets5,
+         libqt5gui5,
+         libqt5core5a,
+         libstdc++6,
+         libc6,
+         libgcc-s1  
 Recommends: systemd, curl
 Description: Linux System Optimizer and Monitoring
